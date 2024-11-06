@@ -32,6 +32,12 @@ class Calculator {
   abs(number) {
     return Math.abs(number);
   }
+
+  factorial(n) {
+    if (n < 0) throw new Error("Cannot calculate factorial of negative number");
+    if (n === 0 || n === 1) return 1;
+    return n * this.factorial(n - 1);
+  }
 }
 
 module.exports = Calculator;

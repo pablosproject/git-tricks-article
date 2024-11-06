@@ -53,6 +53,15 @@ describe("Calculator", () => {
     expect(calc.abs(0)).toBe(0);
   });
 
+  test("calculates factorial correctly", () => {
+    expect(calc.factorial(0)).toBe(1);
+    expect(calc.factorial(1)).toBe(1);
+    expect(calc.factorial(5)).toBe(120);
+    expect(() => calc.factorial(-1)).toThrow(
+      "Cannot calculate factorial of negative number",
+    );
+  });
+
   test("throws error when dividing by zero", () => {
     expect(() => calc.divide(5, 0)).toThrow("Division by zero");
   });
