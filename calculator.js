@@ -19,6 +19,12 @@ class Calculator {
   power(base, exponent) {
     return Math.pow(base, exponent);
   }
+
+  sqrt(number) {
+    if (number < 0)
+      throw new Error("Cannot calculate square root of negative number");
+    return Math.sqrt(number);
+  }
 }
 
 module.exports = Calculator;

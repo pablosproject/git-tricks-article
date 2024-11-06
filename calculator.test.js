@@ -39,6 +39,14 @@ describe("Calculator", () => {
     expect(calc.power(5, 0)).toBe(1);
   });
 
+  test("calculates square root correctly", () => {
+    expect(calc.sqrt(9)).toBe(3);
+    expect(calc.sqrt(2)).toBeCloseTo(1.4142, 4);
+    expect(() => calc.sqrt(-1)).toThrow(
+      "Cannot calculate square root of negative number",
+    );
+  });
+
   test("throws error when dividing by zero", () => {
     expect(() => calc.divide(5, 0)).toThrow("Division by zero");
   });
