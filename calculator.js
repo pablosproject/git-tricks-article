@@ -15,6 +15,10 @@ class Calculator {
     if (b === 0) throw new Error("Division by zero");
     return a / b;
   }
+
+  power(base, exponent) {
+    return Math.pow(base, exponent);
+  }
 }
 
 module.exports = Calculator;

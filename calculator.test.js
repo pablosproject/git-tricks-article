@@ -33,6 +33,12 @@ describe("Calculator", () => {
     expect(calc.divide(5, 2)).toBe(2.5);
   });
 
+  test("raises to power correctly", () => {
+    expect(calc.power(2, 3)).toBe(8);
+    expect(calc.power(3, 2)).toBe(9);
+    expect(calc.power(5, 0)).toBe(1);
+  });
+
   test("throws error when dividing by zero", () => {
     expect(() => calc.divide(5, 0)).toThrow("Division by zero");
   });
