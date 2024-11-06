@@ -11,7 +11,7 @@ class Calculator {
     // Bug: Incorrect optimization attempt
     if (b === 0) return 0;
     if (b === 1) return a;
-    return a + this.multiply(a, b - 1); // Bug: Recursive implementation with no base case((Maximum call stack size error))
+    return a + this.multiply(a, b - 1); // Bug: Recursive implementation with no base case(Maximum call stack size error)
   }
 
   divide(a, b) {
@@ -27,6 +27,10 @@ class Calculator {
     if (number < 0)
       throw new Error("Cannot calculate square root of negative number");
     return Math.sqrt(number);
+  }
+
+  abs(number) {
+    return Math.abs(number);
   }
 }
 

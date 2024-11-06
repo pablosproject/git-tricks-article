@@ -47,6 +47,12 @@ describe("Calculator", () => {
     );
   });
 
+  test("calculates absolute value correctly", () => {
+    expect(calc.abs(-5)).toBe(5);
+    expect(calc.abs(5)).toBe(5);
+    expect(calc.abs(0)).toBe(0);
+  });
+
   test("throws error when dividing by zero", () => {
     expect(() => calc.divide(5, 0)).toThrow("Division by zero");
   });
