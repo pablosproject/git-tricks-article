@@ -8,7 +8,10 @@ class Calculator {
   }
 
   multiply(a, b) {
-    return a * b;
+    // Bug: Incorrect optimization attempt
+    if (b === 0) return 0;
+    if (b === 1) return a;
+    return a + this.multiply(a, b - 1); // Bug: Recursive implementation with no base case((Maximum call stack size error))
   }
 
   divide(a, b) {
